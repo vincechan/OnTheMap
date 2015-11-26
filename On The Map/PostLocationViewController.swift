@@ -145,8 +145,8 @@ class PostLocationViewController: UIViewController, UITextFieldDelegate {
     
     // Create the controls for submitting location
     func createSubmitLocationViews() {
-        urlTextField = UITextField(frame: CGRect(x: 0, y: topView.frame.minY,
-            width: topView.frame.width, height: topView.frame.height))
+        urlTextField = UITextField(frame: CGRect(x: 0, y: topView.frame.minY + 30,
+            width: topView.frame.width, height: topView.frame.height - 30))
         urlTextField.textColor = UIColor.whiteColor()
         urlTextField.textAlignment = NSTextAlignment.Center
         urlTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Top
