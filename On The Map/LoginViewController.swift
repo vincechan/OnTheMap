@@ -73,7 +73,7 @@ class LoginViewController: UIViewController  {
             (success, error) in
             if error != nil {
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.showError(self.view, error: "Invalid credential")
+                    self.showError(self.view, error: "\(error!)")
                 }
                 return
             }

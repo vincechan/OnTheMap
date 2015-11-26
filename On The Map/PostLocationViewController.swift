@@ -273,7 +273,7 @@ class PostLocationViewController: UIViewController, UITextFieldDelegate {
                     
                     if (addError != nil) {
                         dispatch_async(dispatch_get_main_queue()) {
-                            self.showError("error posting location: \(addError)")
+                            self.showError("Error posting location: \(addError!)")
                         }
                     }
                     else {
@@ -283,7 +283,11 @@ class PostLocationViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }
-            
+            else {
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.showError("Error posting location: \(error!)")
+                }
+            }
         }
     }
     
