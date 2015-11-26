@@ -174,6 +174,7 @@ class PostLocationViewController: UIViewController, UITextFieldDelegate {
         submitButton.layer.cornerRadius = 6
         submitButton.backgroundColor = UIColor.whiteColor()
         submitButton.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Normal)
+        submitButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Highlighted)
         submitButton.addTarget(self, action: "submit", forControlEvents: UIControlEvents.TouchUpInside)
         bottomView.addSubview(submitButton)
     }
